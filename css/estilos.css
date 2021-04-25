@@ -1,0 +1,273 @@
+* {
+    font-family: Arial;
+}
+
+:root {
+    --fondo-color: #36495E;
+    --azul-color: #3F48CC;
+    --azul-claro-color: #1CE2C7;
+    --negro-color: #141414;
+    --gris-color: #6A82A1;
+}
+
+body {
+    background-color:  var(--fondo-color);
+}
+
+
+
+
+/* CABECERA*/
+
+.header {
+    background-image: url("../img/fondo2.jpg");
+    background-attachment: fixed;
+    background-position: -160px -22px;
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+    display: flex;
+    background-color: var(--azul-color);
+}
+
+.header__a {
+    max-width: 300px;
+    align-items: center;
+    padding: 50px;
+}
+
+.header__div img {
+    max-width: 50%;
+}
+
+/* MENU */
+
+.nav {
+    background-color: var(--fondo-color);
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    width: 100%;
+    list-style: none;
+}
+
+.menu li > ul > li{
+    width: 25%;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--azul-claro-color);
+    width: 100%;
+    padding: 15.5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    transition: background 500ms;
+}
+
+.menu a:hover {
+    background: var(--negro-color);
+}
+
+/* SUB MENU */
+
+.submenu {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+}
+
+.submenu__li {
+    background: var(--fondo-color);
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+}
+
+
+
+/* PAIGNA PRINCIPAL */
+
+.contenedor {
+    margin: 0px auto;
+    width: 80%;
+    height: auto;
+    background: var(--gris-color);
+}
+
+.contenido__section {
+    padding: 10px;
+}
+
+.contenido__articulo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    background: var(--azul-color);
+}
+
+.contenido__articulo img {
+    flex-grow: 1;
+    width: 350px;
+    height: 200px;
+}
+
+.contenido__articulo p {
+    flex-grow: 2;
+    display: block;
+    margin: 30px;
+    width: 50%;
+    color: var(--azul-claro-color);
+    font-size: 30px;
+    align-self: center;
+}
+
+.description {
+    grid-column: 2 / 4;
+}
+
+
+
+/* PIE DE PAGINA */
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer__container {
+    margin: auto;
+    width: 80%;
+    color: var(--azul-claro-color);
+}
+
+.footer__container a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* GALERIA DE JUEGOS */
+
+.galeria {
+    background-color: var(--gris-color);
+    display: grid;
+    width: 80%;
+    padding: 16px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 16px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms;
+}
+
+.galeria img:hover{
+    transform: scale(1.1,1.1);
+}
+
+/*MAPAS*/
+
+.mapas {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: #6A82A1;
+}
+
+.mapas > div{
+    margin: 50px;
+    background: var(--azul-color);
+}
+
+.mapas h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--azul-claro-color);
+}
+
+.mapas iframe {
+    width: 500px;
+}
+
+
+/*CONTACTO*/
+
+.contacto {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--gris-color);
+    padding-bottom: 50px;
+}
+
+.form label {
+    display: block;
+    color: var(--azul-claro-color);
+    font-size: 30px;
+}
+
+.form label:first-child{
+    margin-top: 50px;
+}
+
+.form input {
+    width: 40%;
+    padding: 6px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid var(--azul-claro-color);
+    background: var(--fondo-color);
+    color: var(--azul-claro-color);
+}
+
+.form input[type="submit"]{
+    width: 15%;
+    border: 3px solid var(--azul-claro-color);
+    border-radius: 5px;
+}
+.form input[type="submit"]:hover{
+    background-color: var(--negro-color);
+    cursor: pointer;
+}
+
+.form textarea {
+    width: 40%;
+    display: block;
+    margin-top: 5px;
+    resize: none;
+} 
